@@ -1,0 +1,28 @@
+#one{
+    background-color: rgb(205, 224, 218);
+    height: 200px;
+    width:200px;
+    margin: auto;
+    border-radius: 10%;
+    border: 1px solid rgb(84, 83, 83);
+    color:rgb(46, 45, 42);
+    padding: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#two{
+    padding-left: 55px;
+    width: auto;
+    font-size: 23px;
+    }
+#three{
+    padding-left:10px;
+    background-color: rgb(203, 220, 233);
+    height:20px;
+}
+#four{
+    padding-left: 10px;
+    background-color: rgb(203,220,233);
+    height: 20px;
+}
+
