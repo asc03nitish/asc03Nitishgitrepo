@@ -1,5 +1,5 @@
 #one{
-    background-color: rgb(205, 224, 218);
+    background-color: #9fd3c7;
     height: 200px;
     width:200px;
     margin: auto;
@@ -17,12 +17,11 @@
     }
 #three{
     padding-left:10px;
-    background-color: rgb(203, 220, 233);
+    background-color: #ececec;
     height:20px;
 }
 #four{
     padding-left: 10px;
-    background-color: rgb(203,220,233);
+    background-color: #ececec;
     height: 20px;
 }
-
