@@ -1,7 +1,9 @@
 import { ProductManager } from "./productmanager";
 import { Product } from "./products";
+
 const productManager = new ProductManager();
-const product : Product={
+
+const product1 : Product={
     id: 1,
     fname: "Nitish",
     lname: "Veni",
@@ -11,11 +13,9 @@ const product : Product={
     delivery: "Delivery"
     
 };
-productManager.addProduct(product);
-var products : Product[] = productManager.listProducts();
-console.log(products);
+productManager.addProduct(product1);
 
-const product1 : Product={
+const product2 : Product={
     id:2,
     fname: "Rajat",
     lname: "Lad",
@@ -25,10 +25,14 @@ const product1 : Product={
     delivery: "Delivery"
     
 };
-productManager.addProduct(product1);
-var products: Product[] =productManager.listProducts();
+productManager.addProduct(product2);
+//Listing 
+var products: Product[] = productManager.listProducts();
 console.log(products);
-
+//Searching
+console.log(productManager.searchProd("Rajat"));
+//Removing
 productManager.removeProduct(1);
 products = productManager.listProducts();
 console.log(products);
+
