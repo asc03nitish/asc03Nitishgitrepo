@@ -56,9 +56,8 @@ function clicck(event) {
     localStorage.setItem('formlocal', JSON.stringify(savedata));
 
     // Reset form after submission
-    document.querySelector('form').reset();
+    // document.querySelector('form').reset();
 }
 window.onload = function(){
     let savedata = JSON.parse(localStorage.getItem('formlocal')) || [];
-    // savedata.forEach(data=>)
 };
