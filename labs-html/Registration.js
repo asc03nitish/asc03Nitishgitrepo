@@ -7,7 +7,6 @@ function clicck(event) {
     const address = document.getElementById('address').value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
     
-    // Collect all checked options (Latte, Cappuccino)
     const selectedOptions = [];
     if (document.getElementById('kapi').checked) {
         selectedOptions.push('Filter Coffee');
@@ -17,10 +16,10 @@ function clicck(event) {
     }
     const options = selectedOptions.join(', ');
 
-    // Collect delivery type (Takeaway or Delivery)
+    
     const delivery = document.querySelector('input[name="type"]:checked').value;
 
-    // Insert data into table
+    // Insert data in table
     const table = document.getElementById('datatable');
     const rowdata = table.insertRow();
 

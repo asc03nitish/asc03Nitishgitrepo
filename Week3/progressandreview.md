@@ -1,5 +1,4 @@
 # Training
- 
 # Week 1 :
 ## Learning
 ## Challenges
@@ -13,10 +12,18 @@
     - modules
     - generics
     - enum
+    - union
 ## Challenges
   - accessing through git
-  - working on syntax and
+  - working on syntax
+  - looking through commands
 ## Support Required
+  -
 ## My contribution
+  - looking through more on using MDN Docs
+  - worked on codes for data fetching
 ## Pending / Completed
+  - All done
 ## Feedback
+  - This weeks training was more interactive and
+     looked upon coding in typescript
