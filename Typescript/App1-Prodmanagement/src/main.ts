@@ -1,5 +1,6 @@
-import { ProductManager } from "./productmanager";
+import { ProductManager } from "./productManager";
 import { Product } from "./products";
+import * as fs from 'fs';
 
 const productManager = new ProductManager();
 
@@ -29,6 +30,10 @@ productManager.addProduct(product2);
 //Listing 
 var products: Product[] = productManager.listProducts();
 console.log(products);
+
+const jsondata = JSON.stringify(products,null,2);
+fs.writeFileSync('users.json',jsondata,'utf8');
+
 //Searching
 console.log(productManager.searchProd("Rajat"));
 //Removing

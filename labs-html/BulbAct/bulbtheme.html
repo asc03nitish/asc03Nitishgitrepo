@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bulb Assignment</title>
+</head>
+
+<body>
+
+    <script>
+        function displayNone() {
+            var vanish = window.document.getElementById("on").style.display = 'none';
+            return vanish;
+        }
+
+        function displayImg() {
+            var addimg = window.document.getElementById("img2").style.display = 'block';
+            return addimg;
+        }
+    </script>
+
+    <div id="on" style="width:350px;height: 350px; background-color:black" onclick="displayNone()">
+        <img src="on.gif" style="margin:50px" id="bulb">
+
+    </div>
+
+    <div id="of" style="width:350px;height: 350px; background-color:rgb(234, 220, 220)" onclick="displayImg()">
+        <img src="off.gif" style="margin:50px" id="bulb">
+
+        <img id='img2' style="display:none; background-color: black; margin-left:500px; margin-top: -250px;"
+            src="on.gif">
+
+    </div>
+</body>
+
+</html>
