@@ -44,6 +44,12 @@ function saveData(event) {
     const address = document.getElementById('address').value;
     const gender = document.querySelector("input[name='gender']:checked") ? document.querySelector("input[name='gender']:checked").value : '';
 
+    // Validation
+    if (!fname || !lname || !date) {
+        alert('Please fill out all required fields.');
+        return;
+    }
+
     const selectedOptions = [];
     if (document.getElementById('kapi').checked) {
         selectedOptions.push('Filter Coffee');
@@ -59,6 +65,14 @@ function saveData(event) {
 
     // Save data to localStorage
     let savedata = JSON.parse(localStorage.getItem('formlocal')) || [];
+    
+    // Prevent duplicate entries
+    const exists = savedata.some(entry => entry.fname === fname && entry.lname === lname && entry.date === date);
+    if (exists) {
+        alert('This entry already exists.');
+        return;
+    }
+    
     savedata.push(formlocal);
     localStorage.setItem('formlocal', JSON.stringify(savedata));
 
