@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project_1": {
+    "PracticeApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/project_1",
+            "outputPath": "dist/practice-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -33,10 +33,10 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "project_1:build:production"
+              "buildTarget": "PracticeApp:build:production"
             },
             "development": {
-              "buildTarget": "project_1:build:development"
+              "buildTarget": "PracticeApp:build:development"
             }
           },
           "defaultConfiguration": "development"
