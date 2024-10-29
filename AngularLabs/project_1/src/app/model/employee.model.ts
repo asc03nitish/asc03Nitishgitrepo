@@ -1,5 +1,5 @@
-export class Employee{
-    id? : number;
-    name? : string;
-    salary? : number;
+export interface Employee {
+    id: string; 
+    name: string;
+    salary: number;
 }
