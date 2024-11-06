@@ -1,7 +1,11 @@
-<form>
-    Login Id:
-    <input type="text" formControlName="loginid">
-    Password:
-    <input type="password" formControlName="password">
-    <button (click)="onSubmit()">Login</button>
+<div class="container">
+    <form [formGroup]= "loginForm">
+        Login Id:
+        <input type="text" formControlname="loginid">
+        <br><br>
+        Password:
+        <input type="password" formControlName="password">
+        <br><br>
+        <button (click)="onSubmit()">Login</button>
 </form>
+</div>

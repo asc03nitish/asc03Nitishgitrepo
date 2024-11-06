@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder} from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "app-login",
@@ -9,7 +10,9 @@ import { FormGroup, FormBuilder} from "@angular/forms";
 
 export class LoginComponent implements OnInit{
     loginForm: FormGroup;
-    constructor(private formBuilder:FormBuilder){}
+
+    constructor(private formBuilder:FormBuilder, private router:Router){}
+
     ngOnInit(){
         this.loginForm = this.formBuilder.group ({
             loginid:["reddy"],
@@ -18,5 +21,15 @@ export class LoginComponent implements OnInit{
     }
     onSubmit(){
         console.log(this.loginForm.value);
+        const loginid: string = this.loginForm.get("loginid").value;
+        const password: string = this.loginForm.get("password").value;
+        if(loginid==="reddy" && password==="hello"){
+            console.log("Successfull");
+            sessionStorage.setItem("loginid","yes");
+            this.router.navigate(["/employees"]);
+        }
+        else{
+            console.log("Unsuccessfull");
+        }
     }
 }
