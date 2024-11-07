@@ -10,7 +10,6 @@ import { Employee } from "../model/employee.model";
 export class EmployeeService{
     baseUrl:string = "http://localhost:3000/Employees";
     constructor(private httpClient:HttpClient){
-
     }
     getEmployees(){
         return this.httpClient.get<Employee[]>(this.baseUrl);

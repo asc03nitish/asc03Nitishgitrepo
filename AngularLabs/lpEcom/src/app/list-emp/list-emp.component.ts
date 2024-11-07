@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from '../model/employee.model';
 import { EmployeeService } from '../service/employee.service';
 import { Route, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-list-emp',
   // standalone: true,
@@ -13,6 +14,7 @@ export class ListEmpComponent implements OnInit{
 
   employees: Employee[];
   employeeService: EmployeeService;
+  searchID: number;
 
   constructor(employeeService: EmployeeService, private router: Router){
     this.employeeService=employeeService;
@@ -23,10 +25,49 @@ export class ListEmpComponent implements OnInit{
     })
     
   }
-  deleteEmployee(id:number){
+  deleteEmployee(id:number | undefined):void{
+    
     this.employeeService.deleteEmployee(id).subscribe(()=>{
         this.employees=this.employees.filter(employee=>employee.id!==id);
     })
+  
+  }
+
+  updateEmployee(id:number | undefined){
+    if(id!==undefined){
+      this.router.navigate(['update', id]);
+    }
+    else{
+      console.log("EmpIDUndefined");
+    }
+  }
+  
+
+searchEmployee() {
+  this.employeeService.getEmployees().subscribe((employees) => {
+    const matchedEmployee = employees.filter(employee => employee.id === this.searchID);
+    
+    if (matchedEmployee.length > 0) {
+      Swal.fire({
+        icon: "success",
+        title: "Hurry...",
+        text: "Employee Found",
+        
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Employee Not Found",
+        
+      });
+    }
+  });
 }
 
+
+ 
+
+
 }
+

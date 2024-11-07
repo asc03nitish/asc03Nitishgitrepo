@@ -1,11 +1,34 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register/Login</a>
+          </li>        
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
 <div class="container">
-    <form [formGroup]= "loginForm">
-        Login Id:
-        <input type="text" formControlname="loginid">
-        <br><br>
-        Password:
-        <input type="password" formControlName="password">
-        <br><br>
-        <button (click)="onSubmit()">Login</button>
-</form>
+    <form [formGroup]="loginForm">
+        <label>Login Id:</label>
+        <input type="text" formControlName="loginid" class="form-control">
+        
+        <label>Password:</label>
+        <input type="password" formControlName="password" class="form-control">
+        
+        <button (click)="onSubmit()" class="btn btn-primary">Login</button>
+    </form>
 </div>

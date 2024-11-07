@@ -1,28 +1,37 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <form class="d-flex" role="search" (ngSubmit)="searchEmployee()">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                [(ngModel)]="searchID" name="searchID">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+
+</nav>
+
 <div class="container">
     <br>
     <h4>Emp-Details</h4>
-    <div>
-        <div class="table-striped" style="width: 500px;">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>SALARY</th>
-                        <th>Send Away</th>
-                        <th>Change</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let employee of employees">
-                        <td>{{employee.id}}</td>
-                        <td>{{employee.name}}</td>
-                        <td>{{employee.salary}}</td>
-                        <td><button class="btn btn-danger" (click)="deleteEmployee(employee.id)">X</button></td>
-                        <td><button class="btn">Update</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="table-striped">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>SALARY</th>
+                    <th>Send Away</th>
+                    <th>Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.salary}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteEmployee(employee.id)">X</button></td>
+                    <td><button class="btn btn-primary" (click)="updateEmployee(employee.id)">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

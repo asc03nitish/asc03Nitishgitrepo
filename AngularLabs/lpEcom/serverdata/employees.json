@@ -2,8 +2,8 @@
   "Employees": [
     {
       "id": "1",
-      "name": "Nitist",
-      "salary": 500
+      "name": "Nitish",
+      "salary": "550"
     },
     {
       "id": "2",
@@ -14,6 +14,11 @@
       "id": "3",
       "name": "Ayush",
       "salary": 400
+    },
+    {
+      "id": "4",
+      "name": "Bodha",
+      "salary": 450
     }
   ]
 }
