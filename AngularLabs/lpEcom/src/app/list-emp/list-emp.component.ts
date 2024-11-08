@@ -10,63 +10,64 @@ import Swal from 'sweetalert2';
   templateUrl: './list-emp.component.html',
   styleUrl: './list-emp.component.css'
 })
-export class ListEmpComponent implements OnInit{
+export class ListEmpComponent implements OnInit {
 
   employees: Employee[];
   employeeService: EmployeeService;
   searchID: number;
+  matchedEmployee: Employee[];
 
-  constructor(employeeService: EmployeeService, private router: Router){
-    this.employeeService=employeeService;
+  constructor(employeeService: EmployeeService, private router: Router) {
+    this.employeeService = employeeService;
   }
   ngOnInit(): void {
-    this.employeeService.getEmployees().subscribe((employeeData)=>{
-      this.employees=employeeData;
+    this.employeeService.getEmployees().subscribe((employeeData) => {
+      this.employees = employeeData;
     })
-    
+
   }
-  deleteEmployee(id:number | undefined):void{
-    
-    this.employeeService.deleteEmployee(id).subscribe(()=>{
-        this.employees=this.employees.filter(employee=>employee.id!==id);
+  deleteEmployee(id: number | undefined): void {
+
+    this.employeeService.deleteEmployee(id).subscribe(() => {
+      this.employees = this.employees.filter(employee => employee.id !== id);
     })
-  
+
   }
 
-  updateEmployee(id:number | undefined){
-    if(id!==undefined){
+  updateEmployee(id: number | undefined) {
+    if (id !== undefined) {
       this.router.navigate(['update', id]);
     }
-    else{
+    else {
       console.log("EmpIDUndefined");
     }
   }
-  
-
-searchEmployee() {
-  this.employeeService.getEmployees().subscribe((employees) => {
-    const matchedEmployee = employees.filter(employee => employee.id === this.searchID);
-    
-    if (matchedEmployee.length > 0) {
-      Swal.fire({
-        icon: "success",
-        title: "Hurry...",
-        text: "Employee Found",
-        
-      });
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Employee Not Found",
-        
-      });
-    }
-  });
-}
 
 
- 
+  searchEmployee() {
+    this.employeeService.getEmployees().subscribe((employees) => {
+      this.matchedEmployee = employees.filter(employee => employee.id === this.searchID);
+
+      if (this.matchedEmployee.length > 0) {
+        Swal.fire({
+          icon: "success",
+          title: "Hurry...",
+          text: "Employee Found",
+
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Employee Not Found",
+
+        });
+      }
+    });
+  }
+
+
+
 
 
 }
