@@ -6,13 +6,15 @@ import { ListEmpComponent } from "./list-emp/list-emp.component";
 import { UpdateEmpComponent } from "./update-emp/update-emp.component";
 import { AuthGuardService } from "./service/auth-guard.service";
 import { RegisterComponent } from "./register/register.component";
+import { AddEmpComponent } from "./add-emp/add-emp.component";
 
 const routes: Routes = [
     { path:'login', component: LoginComponent},
     {path:'employees', component: ListEmpComponent, canActivate: [AuthGuardService]},
     { path: 'update/:id', component: UpdateEmpComponent},
+    { path: 'addemp', component: AddEmpComponent},
     { path: 'register', component: RegisterComponent},
-    { path: '**', component: LoginComponent }
+    { path: '**', component: LoginComponent },
 ]
 
 @NgModule({

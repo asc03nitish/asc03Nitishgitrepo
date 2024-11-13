@@ -15,15 +15,15 @@ export class LoginComponent implements OnInit{
 
     ngOnInit(){
         this.loginForm = this.formBuilder.group ({
-            loginid:["dboss"],
+            loginid:["lawrence"],
             password: []
-        });
+        }); 
     }
     onSubmit(){
         console.log(this.loginForm.value);
         const loginid: string = this.loginForm.get("loginid").value;
         const password: string = this.loginForm.get("password").value;
-        if(loginid==="dboss" && password==="shed"){
+        if(loginid==="lawrence" && password==="gun"){
             console.log("Successfull");
             sessionStorage.setItem("loginid","yes");
             this.router.navigate(["/employees"]);

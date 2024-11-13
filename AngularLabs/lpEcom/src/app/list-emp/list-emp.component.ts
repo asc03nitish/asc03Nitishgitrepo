@@ -43,6 +43,11 @@ export class ListEmpComponent implements OnInit {
     }
   }
 
+  logOut(){
+    sessionStorage.setItem("loginid","no");
+    this.router.navigate(['/login']);
+  }
+
 
   searchEmployee() {
     this.employeeService.getEmployees().subscribe((employees) => {
@@ -66,6 +71,9 @@ export class ListEmpComponent implements OnInit {
     });
   }
 
+  addEmp(){
+    this.router.navigate(['/addemp']);
+  }
 
 
 

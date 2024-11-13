@@ -1,60 +1,68 @@
 /* Center the form on the page */
 form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 20px;
-    background-color: #f9f8fa;
+    background-color: #f4f0f8; /* Light lavender background */
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style each form group to add spacing */
+/* Form Group Styling */
 .form-group {
     margin-bottom: 1.5rem;
 }
 
-/* Style labels */
+/* Label Styling */
 .form-group label {
     font-weight: bold;
+    color: #5e35b1; /* Dark lavender for label text */
     margin-bottom: 0.5rem;
     display: block;
-    color: #333;
 }
 
-/* Style input fields */
+/* Input Field Styling */
 .form-control {
-    border: 1px solid #ced4da;
-    border-radius: 4px;
+    border: 1px solid #d1c4e9; /* Light lavender border */
+    border-radius: 5px;
     padding: 10px;
     width: 100%;
     font-size: 16px;
     box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
-/* Style the submit button */
+.form-control:focus {
+    border-color: #9575cd; /* Darker lavender on focus */
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(149, 117, 205, 0.5);
+}
+
+/* Button Styling */
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
+    background-color: #9575cd; /* Lavender button background */
+    border-color: #9575cd;
+    color: #ffffff;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s;
 }
 
-/* Hover and focus effects for the button */
+/* Hover and Focus Effects for Button */
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #7e57c2; /* Darker lavender on hover */
+    border-color: #7e57c2;
 }
 
 .btn-primary:focus {
     outline: none;
-    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0px 0px 5px rgba(126, 87, 194, 0.5);
 }
 
-/* Add some spacing at the top of the form */
+/* Additional Spacing for Buttons */
 .mt-3 {
     margin-top: 1rem !important;
 }

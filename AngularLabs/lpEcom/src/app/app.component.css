@@ -1,9 +1,20 @@
+/* Navbar Styling */
 .navbar {
-    background-color:aqua;
+    background-color: #b39ddb; /* Light lavender background */
     padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
+/* Navbar Brand Styling */
 .navbar-brand {
     font-weight: bold;
     font-size: 24px;
+    color: #5e35b1; /* Dark lavender color for contrast */
+    text-transform: uppercase; /* Optional: Makes brand name stand out */
+}
+
+/* Optional: Hover effect for Navbar Brand */
+.navbar-brand:hover {
+    color: #311b92; /* Darker shade of lavender on hover */
+    text-decoration: none; /* Ensures link styling stays clean */
 }

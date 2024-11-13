@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Nitish",
-      "salary": "550"
+      "salary": 550
     },
     {
       "id": "2",
@@ -16,9 +16,24 @@
       "salary": 400
     },
     {
-      "id": "4",
-      "name": "Bodha",
-      "salary": "451"
+      "id": "22",
+      "name": "RAJAT LAD",
+      "salary": "20000"
+    },
+    {
+      "id": "12",
+      "name": "WHQFDHGQWD",
+      "salary": "357652171"
+    },
+    {
+      "id": "6",
+      "name": "sUBBU",
+      "salary": "99"
+    },
+    {
+      "id": "7",
+      "name": "Jeeva",
+      "salary": "88"
     }
   ]
 }
