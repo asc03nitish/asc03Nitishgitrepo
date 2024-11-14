@@ -46,7 +46,7 @@ export class IssuelistComponent implements OnInit {
   }
 
   logOut(){
-    sessionStorage.setItem("managerid","no");
+    sessionStorage.setItem("loggedIn","no");
     this.router.navigate(['/login']);
   }
 

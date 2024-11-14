@@ -27,10 +27,8 @@ export class AddissueComponent implements OnInit{
       assign : [''],
       date : [''],
       id: ['']
-
-
-
     });
+    
     this.addIssueForm.get('issueid').valueChanges.subscribe(value => {
       this.addIssueForm.patchValue({
         id: value

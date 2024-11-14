@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
     this.loginForm = this.formbuilder.group({
-      managerid:['', [ Validators.required, Validators.minLength(4), Validators.maxLength(10) ]],
-      password:['', [ Validators.required, ]]
+      managerid:["subbu"],
+      password:[]
     });
   }
 
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit{
         const password: string = this.loginForm.get("password").value;
         if(managerid==="subbu" && password==="subbu"){
             console.log("Successfull");
-            sessionStorage.setItem("subbu","yes");
+            sessionStorage.setItem("loggedIn","yes");
             this.router.navigate(["/issuelist"]);
         }
         else{

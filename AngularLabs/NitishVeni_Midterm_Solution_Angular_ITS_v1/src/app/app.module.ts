@@ -11,10 +11,11 @@ import { HomeComponent } from "./home/home.component";
 import { IssuelistComponent } from "./issuelist/issuelist.component";
 import { AddissueComponent } from "./addissue/addissue.component";
 import { UpdateissueComponent } from "./updateissue/updateissue.component";
+import { RouterModule, RouterOutlet } from "@angular/router";
 
 @NgModule({
     declarations:[AppComponent, NavbarComponent, LoginComponent, HomeComponent, IssuelistComponent, AddissueComponent, UpdateissueComponent],
-    imports:[BrowserModule,HttpClientModule,ReactiveFormsModule,FormsModule, AppRoutingModule],
+    imports:[BrowserModule,HttpClientModule,ReactiveFormsModule,FormsModule, AppRoutingModule,RouterOutlet,RouterModule],
     bootstrap:[AppComponent]
 })
 
