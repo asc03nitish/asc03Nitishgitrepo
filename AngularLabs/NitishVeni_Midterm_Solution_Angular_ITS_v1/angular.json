@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "plcom": {
+    "NitishVeni_Midterm_Solution_Angular_ITS_v1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/plcom",
+            "outputPath": "dist/nitish-veni-midterm-solution-angular-its-v1",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "plcom:build:production"
+              "buildTarget": "NitishVeni_Midterm_Solution_Angular_ITS_v1:build:production"
             },
             "development": {
-              "buildTarget": "plcom:build:development"
+              "buildTarget": "NitishVeni_Midterm_Solution_Angular_ITS_v1:build:development"
             }
           },
           "defaultConfiguration": "development"

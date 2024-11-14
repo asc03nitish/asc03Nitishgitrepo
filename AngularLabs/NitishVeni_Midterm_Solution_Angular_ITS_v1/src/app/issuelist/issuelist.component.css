@@ -1,0 +1,184 @@
+/* General Container Styling */
+.container {
+    margin-top: 3rem;
+    padding: 2rem;
+    max-width: 1200px;
+    background-color: #f4f0f8; /* Light lavender background */
+    border-radius: 10px;
+}
+
+/* Card Component */
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+    overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(135deg, #b39ddb, #9575cd); /* Lavender gradient */
+    color: #ffffff;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.card-header h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Card Body */
+.card-body {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+/* Button Styling */
+button {
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: #9575cd; /* Lavender button */
+    border-color: #9575cd;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #7e57c2; /* Darker lavender on hover */
+    border-color: #7e57c2;
+}
+
+.btn-outline-danger {
+    color: #ba68c8; /* Soft lavender-pink for danger */
+    border-color: #ba68c8;
+}
+
+.btn-outline-warning {
+    color: #b39ddb; /* Soft lavender color for warning */
+    border-color: #b39ddb;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ba68c8;
+    color: white;
+}
+
+.btn-outline-warning:hover {
+    background-color: #b39ddb;
+    color: white;
+}
+
+/* Input Field */
+input[type="text"] {
+    border: 1px solid #d1c4e9;
+    border-radius: 5px;
+    padding: 0.75rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #9575cd;
+    outline: none;
+    box-shadow: 0 0 5px rgba(149, 117, 205, 0.5);
+}
+
+/* Table Styling */
+.table-responsive {
+    margin-top: 1.5rem;
+}
+
+.table {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #9575cd; /* Lavender header background */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0e6f7; /* Light lavender for row hover */
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.fw-semibold {
+    font-weight: 500;
+}
+
+/* Search Results Section */
+.card.mt-4 .card-header {
+    background-color: #b39ddb; /* Softer lavender for search results */
+    color: #ffffff;
+}
+
+.card.mt-4 .card-body {
+    padding: 1rem;
+}
+
+/* Styling for the Delete and Update Buttons */
+button.btn-outline-danger,
+button.btn-outline-warning {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+button.btn-outline-danger {
+    border-color: #ba68c8;
+    color: #ba68c8;
+}
+
+button.btn-outline-warning {
+    border-color: #b39ddb;
+    color: #b39ddb;
+}
+
+button.btn-outline-danger:hover {
+    background-color: #ba68c8;
+    color: white;
+}
+
+button.btn-outline-warning:hover {
+    background-color: #b39ddb;
+    color: white;
+}
+
+/* Table Action Buttons */
+.table td .btn {
+    margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
