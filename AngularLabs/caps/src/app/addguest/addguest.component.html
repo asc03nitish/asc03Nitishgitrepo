@@ -1,0 +1,99 @@
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn" style="margin-right: 2.4%;" (click)="back()">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+</div>
+
+<div class="container">
+  <form [formGroup]="addGuestForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-group">
+      <div class="form-row">
+        <label for="guestId" class="col-form-label">Guest ID</label>
+        <input type="number" formControlName="guestId" id="guestId" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('guestId').touched && addGuestForm.get('guestId').invalid" class="text-danger">
+        Guest ID is required.
+      </div>
+
+      <div class="form-row">
+        <label for="name" class="col-form-label">Name</label>
+        <input type="text" formControlName="name" id="name" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('name').touched && addGuestForm.get('name').invalid" class="text-danger">
+        Name is required.
+      </div>
+
+      <div class="form-row">
+        <label for="age" class="col-form-label">Age</label>
+        <input type="number" formControlName="age" id="age" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('age').touched && addGuestForm.get('age').invalid" class="text-danger">
+        Age is required.
+      </div>
+
+      <div class="form-row">
+        <label for="gender" class="col-form-label">Gender</label>
+        <select formControlName="gender" id="gender" class="form-control col-input">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div *ngIf="addGuestForm.get('gender').touched && addGuestForm.get('gender').invalid" class="text-danger">
+        Gender is required.
+      </div>
+
+      <div class="form-row">
+        <label for="contact" class="col-form-label">Contact</label>
+        <input type="text" formControlName="contact" id="contact" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('contact').touched && addGuestForm.get('contact').invalid" class="text-danger">
+        Contact is required.
+      </div>
+
+      <div class="form-row">
+        <label for="email" class="col-form-label">Email</label>
+        <input type="email" formControlName="email" id="email" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('email').touched && addGuestForm.get('email').invalid" class="text-danger">
+        Email is required.
+      </div>
+
+      <div class="form-row">
+        <label for="checkInDate" class="col-form-label">Check-In Date</label>
+        <input type="date" formControlName="checkInDate" id="checkInDate" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('checkInDate').touched && addGuestForm.get('checkInDate').invalid" class="text-danger">
+        Check-In Date is required.
+      </div>
+
+      <div class="form-row">
+        <label for="checkOutDate" class="col-form-label">Check-Out Date</label>
+        <input type="date" formControlName="checkOutDate" id="checkOutDate" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('checkOutDate').touched && addGuestForm.get('checkOutDate').invalid" class="text-danger">
+        Check-Out Date is required.
+      </div>
+
+      <div class="form-row">
+        <label for="roomNumber" class="col-form-label">Room Number</label>
+        <input type="text" formControlName="roomNumber" id="roomNumber" class="form-control col-input" />
+      </div>
+      <div *ngIf="addGuestForm.get('roomNumber').touched && addGuestForm.get('roomNumber').invalid" class="text-danger">
+        Room Number is required.
+      </div>
+
+      <div class="form-row">
+        <label for="remarks" class="col-form-label">Remarks</label>
+        <textarea formControlName="remarks" id="remarks" class="form-control col-input"></textarea>
+      </div>
+
+      <br>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block submit-btn">Add Guest</button>
+      </div>
+      <br>
+    </div>
+  </form>
+</div>

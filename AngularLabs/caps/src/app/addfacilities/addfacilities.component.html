@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-end mb-4">
+    <button mat-raised-button type="button" class="btn btn-primary btn" style="margin-right: 2.4%;" (click)="back()">Back</button>
+  </div>
+  
+  <div class="container">
+    <form [formGroup]="addFacilityForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="facilityId">Facility ID</label>
+        <input type="number" formControlName="facilityId" id="facilityId" class="form-control" />
+        <div *ngIf="addFacilityForm.get('facilityId').touched && addFacilityForm.get('facilityId').invalid" class="text-danger">
+          Facility ID is required.
+        </div>
+  
+        <label for="hotelId">Hotel ID</label>
+        <input type="number" formControlName="hotelId" id="hotelId" class="form-control" />
+        <div *ngIf="addFacilityForm.get('hotelId').touched && addFacilityForm.get('hotelId').invalid" class="text-danger">
+          Hotel ID is required.
+        </div>
+  
+        <label for="facilityName">Facility Name</label>
+        <input type="text" formControlName="facilityName" id="facilityName" class="form-control" />
+        <div *ngIf="addFacilityForm.get('facilityName').touched && addFacilityForm.get('facilityName').invalid" class="text-danger">
+          Facility Name is required.
+        </div>
+  
+        <label for="description">Description</label>
+        <textarea formControlName="description" id="description" class="form-control"></textarea>
+        <div *ngIf="addFacilityForm.get('description').touched && addFacilityForm.get('description').invalid" class="text-danger">
+          Description is required.
+        </div>
+  
+        <label for="availability">Availability</label>
+        <input type="text" formControlName="availability" id="availability" class="form-control" />
+        <div *ngIf="addFacilityForm.get('availability').touched && addFacilityForm.get('availability').invalid" class="text-danger">
+          Availability is required.
+        </div>
+  
+        <label for="cost">Cost</label>
+        <input type="number" formControlName="cost" id="cost" class="form-control" />
+        <div *ngIf="addFacilityForm.get('cost').touched && addFacilityForm.get('cost').invalid" class="text-danger">
+          Cost is required.
+        </div>
+  
+        <br>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-block">Add Facility</button>
+        </div><br>
+      </div>
+    </form>
+  </div>
+  

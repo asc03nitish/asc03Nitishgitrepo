@@ -1,0 +1,123 @@
+/* General Form Layout */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form rows with labels on the left and inputs on the right */
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .col-form-label {
+    width: 150px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  .col-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .col-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Back button styling */
+  .btn.btn-primary {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .d-flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .d-grid {
+    margin-top: 20px;
+  }
+  
+  /* Icon Style */
+  i {
+    margin-right: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .col-form-label {
+      font-size: 0.9rem;
+      width: auto;
+      margin-right: 10px;
+    }
+  
+    .col-input {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  }
+  

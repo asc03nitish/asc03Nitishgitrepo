@@ -1,0 +1,63 @@
+<div style="font-family: Arial, sans-serif; margin: 20px;">
+    <!-- Back Button -->
+    <div class="d-flex justify-content-end mb-4">
+        <button mat-raised-button type="button" class="btn btn-primary" (click)="back()">Back</button>
+    </div>
+
+    <!-- Search Bar and Buttons -->
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <input 
+            type="text" 
+            placeholder="Search by Booking ID" 
+            [(ngModel)]="searchBookingId" 
+            name="searchBookingId" 
+            (ngModelChange)="searchBooking()" 
+            style="padding: 8px; width: 60%; border: 1px solid #ccc; border-radius: 5px;" />
+        <button 
+            style="padding: 10px 20px; background-color: #28A745; color: white; border: none; border-radius: 5px; cursor: pointer;" 
+            (click)="searchBooking()">Search
+        </button>
+        <button 
+            style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;" 
+            (click)="addBooking()">Add Guest
+        </button>
+    </div>
+
+    <!-- Bookings List Table -->
+    <div style="margin-bottom: 20px;">
+        <h4 style="text-align: center; margin-bottom: 20px;">Booking Details</h4>
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">Booking ID</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Hotel ID</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Guest ID</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Check-in Date</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Check-out Date</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Total Amount</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let booking of matchedBookings.length > 0 ? matchedBookings : bookings" style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 10px;">{{ booking.bookingId }}</td>
+                    <td style="padding: 10px;">{{ booking.hotelId }}</td>
+                    <td style="padding: 10px;">{{ booking.guestId }}</td>
+                    <td style="padding: 10px;">{{ booking.checkInDate }}</td>
+                    <td style="padding: 10px;">{{ booking.checkOutDate }}</td>
+                    <td style="padding: 10px;">{{ booking.totalAmount | currency }}</td>
+                    <td style="padding: 10px;">
+                        <button 
+                            style="padding: 5px 10px; background-color: #FFC107; color: black; border: none; border-radius: 3px; cursor: pointer;" 
+                            (click)="updateBooking(booking.bookingId)">Update
+                        </button>
+                        <button 
+                            style="padding: 5px 10px; background-color: #DC3545; color: white; border: none; border-radius: 3px; cursor: pointer;" 
+                            (click)="deleteBooking(booking.bookingId)">Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div style="font-family: Arial, sans-serif; margin: 20px;">
+    <!-- Header with Hotel Details -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4 style="margin: 0;">Hotel Details</h4>
+      <button mat-raised-button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="back()">Back</button>
+    </div>
+  
+    <!-- Search and Add Hotel Buttons -->
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+      <input 
+        type="number" 
+        placeholder="Search by ID" 
+        [(ngModel)]="searchId" 
+        name="searchId" 
+        (ngModelChange)="searchHotel()" 
+        style="padding: 8px; width: 60%; border: 1px solid #ccc; border-radius: 5px;" />
+      <button 
+        style="padding: 10px 20px; background-color: #28A745; color: white; border: none; border-radius: 5px; cursor: pointer;" 
+        (click)="searchHotel()">Search
+      </button>
+      <button 
+        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;" 
+        (click)="addHotel()">Add Hotel
+      </button>
+    </div>
+  
+    <!-- Hotels List Table -->
+    <div style="margin-bottom: 20px;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="background-color: #f2f2f2;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Hotel-ID</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Hotel Name</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Location</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Price per Night</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Availability</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Contact</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Date Added</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hotel of matchedHotels" style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 10px;">{{ hotel.hotelId }}</td>
+            <td style="padding: 10px;">{{ hotel.name }}</td>
+            <td style="padding: 10px;">{{ hotel.location }}</td>
+            <td style="padding: 10px;">{{ hotel.pricePerNight }}</td>
+            <td style="padding: 10px;">{{ hotel.availability }}</td>
+            <td style="padding: 10px;">{{ hotel.contact }}</td>
+            <td style="padding: 10px;">{{ hotel.dateAdded }}</td>
+            <td style="padding: 10px;">
+              <button 
+                style="padding: 5px 10px; background-color: #FFC107; color: black; border: none; border-radius: 3px; cursor: pointer;" 
+                (click)="updateHotel(hotel.hotelId)">Update
+              </button>
+              <button 
+                style="padding: 5px 10px; background-color: #DC3545; color: white; border: none; border-radius: 3px; cursor: pointer;" 
+                (click)="deleteHotel(hotel.hotelId)">Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
