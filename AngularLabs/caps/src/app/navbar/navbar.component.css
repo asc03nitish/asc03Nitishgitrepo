@@ -1,0 +1,32 @@
+/* Add some custom styles */
+.navbar {
+    padding: 1rem 2rem;
+  }
+  
+   .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+/* #main{
+  background-image: url("../../../public/pexels-pixabay-261169.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+  
+  /*.navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-light .navbar-toggler-icon {
+    background-color: #000;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #343a40;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff;
+  } */
