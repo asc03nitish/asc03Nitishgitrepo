@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "d3ca1eae-3cd7-4890-b65c-a990d034d81e",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39278082"
+	},
+	"item": [
+		{
+			"name": "GetRegister",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetBooking",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetHotel",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
